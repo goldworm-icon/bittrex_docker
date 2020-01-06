@@ -45,6 +45,65 @@ This project requires following environments.
 | sslKeyPath | stirng | ssl key path |
 | requestMaxSize | integer | How big a request may be (bytes) |
 
+#### example
+``` json
+{
+	"log": {
+		"logger": "Server",
+		"level": "debug",
+		"filePath": "./log/walletserver.log",
+		"outputType": "console|file",
+		"rotate": {
+			"type": "period|bytes",
+			"period": "daily",
+			"interval": 1,
+			"backupCount": 50,
+			"maxBytes": 10485760
+		}
+	},
+	"host": "0.0.0.0",
+	"port": 9000,
+	"gunicorn": {
+		"workers": 1,
+		"worker_class": "sanic.worker.GunicornWorker",
+		"graceful_timeout": 30
+	},
+	"ssl": true,
+	"sslCertPath": "./resources/crt.txt",
+	"sslKeyPath": "./resources/key.txt",
+	"requestMaxSize": 2097152,
+	"putPort": 5000,
+	"getPort": 5001
+}
+```
+
+### Node Server Configurations
+| Field  | Type  | Description  |
+| ------ | ------ | ------ |
+| storagePath | str | storage path |
+
+#### example
+``` json
+{
+	"log": {
+		"logger": "DBServer",
+		"level": "debug",
+		"filePath": "./log/walletdb.log",
+		"outputType": "console|file",
+		"rotate": {
+			"type": "period|bytes",
+			"period": "daily",
+			"interval": 1,
+			"backupCount": 50,
+			"maxBytes": 10485760
+		}
+	},
+	"putPort": 5000,
+	"getPort": 5001,
+	"storagePath": "./.storage"
+}
+```
+
 
 ### Node Server Configurations
 | Field  | Type  | Description  |
@@ -58,10 +117,36 @@ This project requires following environments.
 | requestMaxSize | integer | How big a request may be (bytes) |
 | mainnetUrl | strring | ICON Foundation Node Url |
 
-### Node Server Configurations
-| Field  | Type  | Description  |
-| ------ | ------ | ------ |
-| storagePath | str | storage path |
+#### example
+``` json
+{
+	"log": {
+		"logger": "Server",
+		"level": "debug",
+		"filePath": "./log/nodeserver.log",
+		"outputType": "console|file",
+		"rotate": {
+			"type": "period|bytes",
+			"period": "daily",
+			"interval": 1,
+			"backupCount": 50,
+			"maxBytes": 10485760
+		}
+	},
+	"host": "0.0.0.0",
+	"port": 9000,
+	"gunicorn": {
+		"workers": 1,
+		"worker_class": "sanic.worker.GunicornWorker",
+		"graceful_timeout": 30
+	},
+	"ssl": true,
+	"sslCertPath": "./resources/crt.txt",
+	"sslKeyPath": "./resources/key.txt",
+	"requestMaxSize": 2097152,
+	"mainnetUrl": "https://ctz.solidwallet.io"
+}
+```
 
 # API Example
 
