@@ -37,13 +37,13 @@ This project requires following environments.
 ### Wallet Server Configurations
 | Field  | Type  | Description  |
 | ------ | ------ | ------ |
-| host | str | server host |
-| port | integer | server port |
-| gunicorn | dict | [gunicorn configuration](https://docs.gunicorn.org/en/stable/configure.html#configuration-file) |
 | ssl | boolean | ssl enable / disable |
-| sslCertPath | string | ssl cert path |
-| sslKeyPath | stirng | ssl key path |
-| requestMaxSize | integer | How big a request may be (bytes) |
+| host | str | (gunicorn) server host |
+| port | integer | (gunicorn) server port |
+| sslCertPath | string | (gunicorn) ssl cert path |
+| sslKeyPath | stirng | (gunicorn) ssl key path |
+| requestMaxSize | integer | (sanic) How big a request may be (bytes) |
+| gunicorn | dict | [gunicorn configuration](https://docs.gunicorn.org/en/stable/configure.html#configuration-file) |
 
 #### example
 ``` json
@@ -108,13 +108,13 @@ This project requires following environments.
 ### Node Server Configurations
 | Field  | Type  | Description  |
 | ------ | ------ | ------ |
-| host | str | server host |
-| port | integer | server port |
-| gunicorn | dict | [gunicorn configuration](https://docs.gunicorn.org/en/stable/configure.html#configuration-file) |
 | ssl | boolean | ssl enable / disable |
-| sslCertPath | string | ssl cert path |
-| sslKeyPath | stirng | ssl key path |
-| requestMaxSize | integer | How big a request may be (bytes) |
+| host | str | (gunicorn) server host |
+| port | integer | (gunicorn) server port |
+| sslCertPath | string | (gunicorn) ssl cert path |
+| sslKeyPath | stirng | (gunicorn) ssl key path |
+| requestMaxSize | integer | (sanic) How big a request may be (bytes) |
+| gunicorn | dict | [gunicorn configuration](https://docs.gunicorn.org/en/stable/configure.html#configuration-file) |
 | mainnetUrl | strring | ICON Foundation Node Url |
 
 #### example
