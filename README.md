@@ -1,6 +1,4 @@
-# bittrex_docker
-
-# === Tutorial ===
+# === Bittrex self-integration ===
 
 ICON Develop team supported Bittrex's self-integration.  
 Please try to integrate and reply feedback on slack "coin-icx-bi"
