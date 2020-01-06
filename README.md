@@ -17,6 +17,51 @@ This project requires following environments.
 ```bash
     $ ./02.build_node.sh
  ```
+### Common Configurations
+| Field  | Type  | Description  |
+| ------ | ------ | ------ |
+| log | dict | logging setting|
+| log.logger | string | logger identify (name) |
+| log.level | string | debug", "info", "warning", "error" |
+| log.filePath | string | log file path |
+| log.outputType | string | “console”: log outputs to the console that iconservice is running.<br>“file”: log outputs to the file path.<br>"console\|file”: log outputs to both console and file.|
+| log.rotate | dict | logging.rotate setting |
+| log.rotate.type | string | "peroid": rotate by period.<br>"bytes": rotate by maxBytes<br>"period\|bytes": log rotate to both period and bytes.|
+| log.rotate.period | string | use logging.TimedRotatingFileHandler<br>'when' ex)daily, weekly, hourly, minutely |
+| log.rotate.interval | integer | use logging.TimedRotatingFileHandler<br>'interval' ex) (period: hourly, interval: 24) == (period: daily) |
+| log.rotate.maxBytes | integer | use logging.RotatingFileHandler<br>'maxBytes' ex) 10mb == 10 * 1024 * 1024 |
+| log.rotate.backupCount | integer | limit log file count |
+| putPort | integer | zeromq port(db put) |
+| getPort | integer | zeromq port(db get) |
+
+### Wallet Server Configurations
+| Field  | Type  | Description  |
+| ------ | ------ | ------ |
+| host | str | server host |
+| port | integer | server port |
+| gunicorn | dict | [gunicorn configuration](https://docs.gunicorn.org/en/stable/configure.html#configuration-file) |
+| ssl | boolean | ssl enable / disable |
+| sslCertPath | string | ssl cert path |
+| sslKeyPath | stirng | ssl key path |
+| requestMaxSize | integer | How big a request may be (bytes) |
+
+
+### Node Server Configurations
+| Field  | Type  | Description  |
+| ------ | ------ | ------ |
+| host | str | server host |
+| port | integer | server port |
+| gunicorn | dict | [gunicorn configuration](https://docs.gunicorn.org/en/stable/configure.html#configuration-file) |
+| ssl | boolean | ssl enable / disable |
+| sslCertPath | string | ssl cert path |
+| sslKeyPath | stirng | ssl key path |
+| requestMaxSize | integer | How big a request may be (bytes) |
+| mainnetUrl | strring | ICON Foundation Node Url |
+
+### Node Server Configurations
+| Field  | Type  | Description  |
+| ------ | ------ | ------ |
+| storagePath | str | storage path |
 
 # API Example
 
