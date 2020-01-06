@@ -1,6 +1,6 @@
 {
 	"log": {
-		"logger": "walletserver",
+		"logger": "Server",
 		"level": "debug",
 		"filePath": "./log/walletserver.log",
 		"outputType": "console|file",
@@ -23,5 +23,6 @@
 	"sslCertPath": "./resources/crt.txt",
 	"sslKeyPath": "./resources/key.txt",
 	"requestMaxSize": 2097152,
-	"storagePath": "./storage"
+	"putPort": 5000,
+	"getPort": 5001
 }

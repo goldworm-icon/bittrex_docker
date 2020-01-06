@@ -1,3 +1,3 @@
 #!/bin/bash
 
-walletserver -c ./config.json
+walletserver -c ./config.json -dc ./dbconfig.json

@@ -1,6 +1,6 @@
 {
 	"log": {
-		"logger": "nodeserver",
+		"logger": "Server",
 		"level": "debug",
 		"filePath": "./log/nodeserver.log",
 		"outputType": "console|file",
