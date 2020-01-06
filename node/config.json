@@ -23,5 +23,5 @@
 	"sslCertPath": "./resources/crt.txt",
 	"sslKeyPath": "./resources/key.txt",
 	"requestMaxSize": 2097152,
-	"mainetUrl": "https://ctz.solidwallet.io"
+	"mainnetUrl": "https://ctz.solidwallet.io"
 }
